@@ -29,30 +29,34 @@ import summaryImg from "../assets/quiz-complete.png";
 ```
 
 ```
-	key update and  re-render the component as per requirement.
+key update and  re-render the component as per requirement.
 ```
 
 ```
-less use of useState hook, derived the value from existing state or data, compute the values not always use state.
+do less use of useState hook,
+derived the value from existing state or data,
+compute the values not always use state.
 ```
 
 ```
-use useRef hook to hold those values which required to be same after changing the state after re-rendering the component.
+use useRef hook to hold those values
+which required to be same after changing the state after re-rendering the component.
 ```
 
 ```
-if possible merge the state to single state hook using array
+if possible merge the state to single state hook using array as value
 ```
 
 ```
 always copy the current state before the state which using array or object as value:
-setUserAnswers((prevState) => {
+		setUserAnswers((prevState) => {
       return [...prevState, selectedAnswer];
     });
 ```
 
 ```
-always check the position of code snippet in file where it should be placed to perform the desired computed value or results
+always check the position of code snippet in file
+where it should be placed to perform the desired computed value or results
 ```
 
 ```
@@ -98,7 +102,8 @@ JS map function to loop on array and print values
 ```
 
 ```
-to button passing function with value to execute in parent component, also setting conditional disable state after clicking it
+to button passing function with value to execute in parent component,
+also setting conditional disable state after clicking it
 	<button
 		onClick={() => onSelect(answer)}
 		className={cssClass}
@@ -107,7 +112,9 @@ to button passing function with value to execute in parent component, also setti
 ```
 
 ```
-handling side-effect function setTimeout with useEffect hook and updating it with depency changes also clearing out the setTimeout fn with  clearTimeout
+handling side-effect function setTimeout with useEffect hook
+and updating it with depency changes
+also clearing out the setTimeout fn with  clearTimeout
 useEffect(() => {
     const tmRef = setTimeout(onTimeout, timeout);
 
@@ -118,7 +125,8 @@ useEffect(() => {
 ```
 
 ```
-handling side-effect function setInterval with useEffect hook and  also clearing out the setInterval fn with clearInterval
+handling side-effect function setInterval with useEffect hook
+and also clearing out the setInterval fn with clearInterval
 useEffect(() => {
     const intRef = setInterval(() => {
       setRemainingTime((prevState) => prevState - 100);
@@ -130,7 +138,8 @@ useEffect(() => {
 ```
 
 ```
-using progress bar html element to show remainin time by passing max value and current value
+using progress bar html element to show remainin time
+by passing max value and current value
 <progress
       id="question-time"
       value={remainingTime}
